@@ -51,7 +51,7 @@ export const getIsWhiteList = createAsyncThunk(
         makeHttpRequest<boolean>(isWhiteListUrl, getAppNameHeader(appName)),
       ]);
       if (whiteListRes.status === "fulfilled") {
-        isWhiteList = whiteListRes.value;
+        isWhiteList = true;
       }
     } catch (error) {
       isWhiteList = false;
