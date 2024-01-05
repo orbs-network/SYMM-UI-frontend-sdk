@@ -57,6 +57,7 @@ export function useAddAccountToContract(accountName: string): {
       };
     } catch (error) {
       if (error && typeof error === "string") throw new Error(error);
+      console.error(error, "multiaccount", JSON.stringify(error));
       throw new Error("error3");
     }
   }, [Contract, account, accountName, isSupportedChainId]);

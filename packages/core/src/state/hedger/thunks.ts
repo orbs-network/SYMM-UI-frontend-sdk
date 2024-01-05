@@ -336,6 +336,7 @@ export const getMarketsInfo = createAsyncThunk(
     } catch (error) {
       console.error(error, "happened in getMarketsInfo");
       if (error && typeof error === "string") throw new Error(error);
+      console.error(error, "thunks", JSON.stringify(error));
       throw new Error("error3");
     }
 

@@ -227,6 +227,7 @@ export function useTransferCollateral(
       };
     } catch (error) {
       if (error && typeof error === "string") throw new Error(error);
+      console.error(error, "transferCollateral", JSON.stringify(error));
       throw new Error("error3");
     }
   }, [

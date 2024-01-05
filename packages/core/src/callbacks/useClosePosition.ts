@@ -161,6 +161,7 @@ export function useClosePosition(
       };
     } catch (error) {
       if (error && typeof error === "string") throw new Error(error);
+      console.error(error, "closePosition", JSON.stringify(error));
       throw new Error("error3");
     }
   }, [

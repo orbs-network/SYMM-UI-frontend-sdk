@@ -67,6 +67,7 @@ export function useMultiAccountable(
         }
       }
       if (error && typeof error === "string") throw new Error(error);
+      console.error(error, "multiAccountable", JSON.stringify(error));
       throw new Error("error3");
     }
   }, [
