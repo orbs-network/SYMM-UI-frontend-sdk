@@ -64,7 +64,7 @@ export default function ErrorButton({
       return "Liquidation after close!";
     else if (state === ErrorState.INVALID_PRICE) return "Price is out of range";
     else if (state === ErrorState.INVALID_QUANTITY) return "Invalid quantity";
-    else if (state === ErrorState.CAP_REACHED) return "Cap reached";
+    // else if (state === ErrorState.CAP_REACHED) return "Cap reached";
     else if (state === ErrorState.HIGHER_THAN_MAX_NOTIONAL_VALUE)
       return "Higher than max notional value";
     else if (state === ErrorState.MAX_PENDING_POSITIONS_REACHED)

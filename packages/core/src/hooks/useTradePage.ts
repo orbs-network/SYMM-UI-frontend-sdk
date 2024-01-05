@@ -186,13 +186,13 @@ export default function useTradePage(): {
     if (outOfRangePrice) {
       return ErrorState.OUT_OF_RANGE_PRICE;
     }
-    if (
-      market &&
-      market.name === notionalCapName &&
-      minimumCap.minus(notionalValue).lte(0)
-    ) {
-      return ErrorState.CAP_REACHED;
-    }
+    // if (
+    //   market &&
+    //   market.name === notionalCapName &&
+    //   minimumCap.minus(notionalValue).lte(0)
+    // ) {
+    //   return ErrorState.CAP_REACHED;
+    // }
 
     if (pendingQuotes.length >= MAX_PENDINGS_POSITIONS_NUMBER) {
       return ErrorState.MAX_PENDING_POSITIONS_REACHED;
