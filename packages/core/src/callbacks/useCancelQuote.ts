@@ -83,6 +83,7 @@ export function useCancelQuote(
       };
     } catch (error) {
       if (error && typeof error === "string") throw new Error(error);
+      console.error(error, "cancelQuote", JSON.stringify(error));
       throw new Error("error3");
     }
   }, [account, Contract, quote, functionName, isSupportedChainId]);

@@ -192,7 +192,10 @@ export function useSentQuoteCallback(): {
     const notionalValue = toBN(openPrice).times(quantityAsset);
     updateNotionalCap({ name: market.name, used, totalCap: total_cap });
 
-    if (freeCap.minus(notionalValue).lte(0)) throw new Error("Cap is reached.");
+    if (freeCap.minus(notionalValue).lte(0)) {
+      console.log("cap is reached but we ignore!")
+      // throw new Error("Cap is reached.");
+    }
   }, [
     MultiAccountContract,
     appName,

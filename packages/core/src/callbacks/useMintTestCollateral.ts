@@ -61,6 +61,7 @@ export function useMintCollateral(): {
       };
     } catch (error) {
       if (error && typeof error === "string") throw new Error(error);
+      console.error(error, "mintTestCollateral", JSON.stringify(error));
       throw new Error("error3");
     }
   }, [account, CollateralContract, isSupportedChainId]);
